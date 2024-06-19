@@ -1,0 +1,68 @@
+/* *{
+    background-color: #afafdf;
+    font-family: garamond, source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif ;
+} */
+body{
+    background-color: #afafdf; 
+    font-family: garamond, source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif ;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.bg {
+    width: 100%;
+    height: 700px;
+}
+.fs{
+    font-family: wide latin;
+    font-size:30px;
+    font-weight: 900;
+}
+.bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nav{
+    --bs-nav-link-color: black;
+    font-size: 30px;
+    font-weight: 900;
+}
+.form-select{
+    border-color: #5A639C;
+    padding: 30px; 
+    font-size:30px;
+    color: #5A639C;
+    font-weight: 900;
+    font-family: garamond;
+}
+.bt{
+    border-color: #5A639C;
+    padding: 10px 35px 10px 35px; 
+  border-radius: 20px;
+  background-color: white;
+    margin-top: 15px;
+    font-size:30px;
+    color: #5A639C;
+    font-weight: 900;
+    font-family: garamond;  
+}
+
+.carousel img {
+    width: 100%;
+    height: 730px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+btn{
+    --bs-btn-bg: transparent;
+}
+.mes{
+    color: black;
+    background-color: #7776B3;
+    padding: 30px;
+}
+.tex{
+    color: #5A639C;
+}
