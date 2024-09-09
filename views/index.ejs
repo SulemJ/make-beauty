@@ -181,9 +181,9 @@
     <%} else if (data.length >= 1) {%>
           <!-- when the response isn't null we display the parsed response  -->
           <div class="carousel-inner">
-              <% for (let index = 1; index < data.length;  index++) {%>
+              <% for (let index = 0; index < data.length;  index++) {%>
                   <div class="carousel-item active ">
-                  <img src="\pics\<%= data[1].product_type %>.jpg" class="d-block w-100" alt="...">
+                  <img src="\pics\<%= data[index].product_type %>.jpg" class="d-block w-100" alt="...">
                     <div class="container ">
                       <div class="carousel-caption text-center ">
                         <h1><%= data[index].brand %></h1>
