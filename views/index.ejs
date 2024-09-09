@@ -112,7 +112,7 @@
         </div>
       </div>
       <div class="carousel-item ">
-        <img src="\pics\nail_Polish.jpg" class="d-block w-100" alt="...">
+        <img src="\pics\nail_polish.jpg" class="d-block w-100" alt="...">
         <div class="container su">
           <div class="carousel-caption text-center ">
             <h1>SINFUL COLOURS</h1>
@@ -172,18 +172,18 @@
   <% }  %>
 <!-- when the user makes a request we send a request by parameter to the API -->
   <% if (locals.content) {%> 
-    <% let data= JSON.parse(content); %>
+    <% let data = JSON.parse(content); %>
     <!-- if the response we get is null we display a message -->
     <% if (data.length == 0) { %>
       <div class="mes text-body-secondary bt">
         <h1>there is no product in this particular type and brand. try another one. </h1>
       </div>
-    <%}else {%>
+    <%} else if (data.length >= 1) {%>
           <!-- when the response isn't null we display the parsed response  -->
           <div class="carousel-inner">
               <% for (let index = 1; index < data.length;  index++) {%>
                   <div class="carousel-item active ">
-                  <img src="\pics\<%= data[index].product_type %>.jpg" class="d-block w-100" alt="...">
+                  <img src="\pics\<%= data[1].product_type %>.jpg" class="d-block w-100" alt="...">
                     <div class="container ">
                       <div class="carousel-caption text-center ">
                         <h1><%= data[index].brand %></h1>
