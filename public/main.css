@@ -43,7 +43,7 @@ body{
   background-color: white;
     margin-top: 15px;
     font-size:30px;
-    color: #5A639C;
+    color: #545e9e;
     font-weight: 900;
     font-family: garamond;  
 }
@@ -55,18 +55,23 @@ body{
     border-radius: 10px;
     margin-bottom: 10px;
 }
-/* .carousel-caption {
-    word-wrap: break-word;
-    white-space: normal;
-  } */
 btn{
     --bs-btn-bg: transparent;
 }
-.mes{
-    color: black;
-    background-color: #7776B3;
-    padding: 30px;
+
+@media only screen and (max-width: 400px) {
+    .display {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+  .bg {
+    width: 100%;
+    height: 350px;
 }
-.tex{
-    color: #5A639C;
+    .s{
+        font-family: wide latin;
+        font-size:20px;
+        font-weight: 900;
+    }
 }
