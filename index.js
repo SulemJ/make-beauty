@@ -12,13 +12,30 @@ app.get("/", (req, res) => {
       res.render("index.ejs");
     });
 app.post("/get-makeup", async (req, res) => {
-      try {
-        const response = await axios.get(API_URL ,  {
-          params: {
-            product_type: req.body.product_type,
-            brand: req.body.brand
+  try {
+              let response; 
+          if (!req.body.product_type && !req.body.brand) {
+            response = await axios.get(API_URL);
+          }else if (req.body.product_type && !req.body.brand) {
+            response = await axios.get(API_URL ,  {
+              params: {
+                product_type: req.body.product_type
+              }
+            });
+          }else if (!req.body.product_type && req.body.brand) {
+            response = await axios.get(API_URL ,  {
+              params: {
+                brand: req.body.brand
+              }
+            });
+          }else {
+            response = await axios.get(API_URL ,  {
+              params: {
+                product_type: req.body.product_type,
+                brand: req.body.brand
+              }
+            });
           }
-        } );
         const result = response.data;
         res.render("index.ejs", { content: JSON.stringify(result) });
       } catch (error) {
